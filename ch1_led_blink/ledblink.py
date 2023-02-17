@@ -15,13 +15,13 @@ ledlight = 11
 
 def setupenv():
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(ledlight, GPIO.OUT, GPIO.LOW)
-    # GPIO.output(ledlight,GPIO.LOW) # 後面State可以是 0 / GPIO.LOW / False or 1 / GPIO.HIGH / True.
+    GPIO.setup(ledlight, GPIO.OUT)
     print('初始設定完畢，led孔位:%d' % ledlight)
 
 
 def execute():
     while True:
+        # 後面State可以是 0 / GPIO.LOW / False or 1 / GPIO.HIGH / True.
         GPIO.output(ledlight, GPIO.HIGH)
         print('-- led 發亮 --')
         GPIO.output(ledlight, GPIO.LOW)
