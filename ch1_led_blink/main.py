@@ -16,6 +16,7 @@ ledlight = 11
 def setupenv():
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(ledlight, GPIO.OUT)
+    GPIO.output(ledlight, GPIO.LOW)
     print('初始設定完畢，led孔位:%d' % ledlight)
 
 
