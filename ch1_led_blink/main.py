@@ -25,6 +25,7 @@ def execute():
         # 後面State可以是 0 / GPIO.LOW / False or 1 / GPIO.HIGH / True.
         GPIO.output(ledlight, GPIO.HIGH)
         print('-- led 發亮 --')
+        time.sleep(1)
         GPIO.output(ledlight, GPIO.LOW)
         print('關燈')
         time.sleep(1)  # 間隔
